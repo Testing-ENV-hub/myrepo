@@ -1,0 +1,498 @@
+{
+  "schema_version": 1,
+  "workflow_id": 7476,
+  "workflow_name": "My Workflow (25) (copy)2",
+  "workflow": {
+    "edges": [
+      {
+        "id": "e-f18937d6-6b48-4149-8bd4-ae6c5cd310c8-out-e38fd386-7a46-4b40-bf55-471478173639",
+        "data": {
+          "condition": "out",
+          "edge_type": "normal",
+          "loop_node_id": null
+        },
+        "type": "action",
+        "source": "f18937d6-6b48-4149-8bd4-ae6c5cd310c8",
+        "target": "e38fd386-7a46-4b40-bf55-471478173639",
+        "sourceHandle": "out",
+        "targetHandle": "in"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "f18937d6-6b48-4149-8bd4-ae6c5cd310c8",
+        "data": {
+          "icon": "https://s3.ap-south-1.amazonaws.com/y0-uat-assets/y0-uploads/tools/2/arrow.svg",
+          "color": "#C2ddE9",
+          "label": "Manual",
+          "value": {
+            "notice": "",
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            }
+          },
+          "bgColor": "#C2ddE9",
+          "actionId": "2",
+          "operation": null,
+          "is_focused": false,
+          "description": "",
+          "resourceName": null,
+          "configuration": {
+            "outputSchema": {
+              "skeleton": [],
+              "capturedAt": "2026-09-09T05:14:04.120Z"
+            },
+            "execution_setting": {}
+          },
+          "focused_field": null,
+          "is_smtp_enable": false,
+          "nodeTypeActions": "trigger",
+          "schemaProperties": [
+            {
+              "name": "notice",
+              "type": "notice",
+              "default": "",
+              "displayName": "This node is where the workflow execution starts (when you click the test button on the canvas).<br><br> <a data-action=\"showNodeCreator\">Explore other ways to trigger your workflow</a> (e.g on a schedule, or a webhook)",
+              "typeOptions": {},
+              "enable_column_fetch_config": false
+            }
+          ],
+          "focused_field_meta": null
+        },
+        "type": "MANUAL",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "dimensions": {
+          "width": 119,
+          "height": 56
+        },
+        "parameters": {
+          "notice": "",
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          }
+        },
+        "selectable": false,
+        "trigger_type": 0,
+        "configuration": {
+          "outputSchema": {
+            "skeleton": [],
+            "capturedAt": "2026-09-09T05:14:04.120Z"
+          },
+          "execution_setting": {}
+        },
+        "nodeTypeActions": "trigger"
+      },
+      {
+        "id": "e38fd386-7a46-4b40-bf55-471478173639",
+        "data": {
+          "icon": "https://s3.ap-south-1.amazonaws.com/y0-uat-assets/y0-uploads/tools/135/edit_files_logo.svg",
+          "color": "#E6E7EC",
+          "label": "Edit Fields (Set)",
+          "value": {
+            "json": "{   \"my_field_1\": \"value\",   \"my_field_2\": 1 }",
+            "mode": "manual",
+            "json-mode": "expression",
+            "field_to_set": [
+              {
+                "key": "age",
+                "value": "28",
+                "keyMode": "fixed",
+                "valueMode": "fixed",
+                "valueType": "string"
+              }
+            ],
+            "other_fields": false,
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            },
+            "fields_to_exclude": "",
+            "fields_to_include": "",
+            "input_fields_to_include": "all"
+          },
+          "bgColor": "#E6E7EC",
+          "actionId": "135",
+          "operation": null,
+          "description": "Modify, add, or remove item  fields",
+          "resourceName": null,
+          "configuration": {
+            "outputSchema": {
+              "skeleton": [
+                {
+                  "age": ""
+                }
+              ],
+              "capturedAt": "2026-09-09T05:14:04.134Z"
+            },
+            "execution_setting": {
+              "notes": "",
+              "on_error": "stop_workflow",
+              "max_retries": 2,
+              "execute_once": false,
+              "retry_on_fail": false,
+              "always_output_data": false,
+              "wait_between_tries": 1000,
+              "display_note_in_flow": false
+            }
+          },
+          "is_smtp_enable": false,
+          "nodeTypeActions": "transformation",
+          "schemaProperties": [
+            {
+              "name": "mode",
+              "type": "options",
+              "default": "manual",
+              "options": [
+                {
+                  "name": "Manual Mapping",
+                  "value": "manual",
+                  "description": "Edit item fields one by one"
+                },
+                {
+                  "name": "JSON",
+                  "value": "json",
+                  "description": "Customize item output with JSON"
+                }
+              ],
+              "required": false,
+              "displayName": "Mode",
+              "typeOptions": {},
+              "is_expression": true,
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "json",
+              "type": "json",
+              "default": "{   \"my_field_1\": \"value\",   \"my_field_2\": 1 }",
+              "required": false,
+              "displayName": "JSON",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "mode": [
+                    "json"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "field_to_set",
+              "type": "field_array",
+              "default": "",
+              "required": false,
+              "fieldArray": [
+                {
+                  "name": "name",
+                  "type": "string",
+                  "default": "",
+                  "options": [],
+                  "description": "",
+                  "displayName": "Name",
+                  "placeholder": "name"
+                }
+              ],
+              "displayName": "Fields to Set",
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "mode": [
+                    "manual"
+                  ]
+                }
+              },
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "other_fields",
+              "type": "boolean",
+              "default": "false",
+              "required": false,
+              "displayName": "Include Other Input Fields",
+              "typeOptions": {},
+              "is_expression": true,
+              "is_reset_disabled": false,
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "input_fields_to_include",
+              "type": "options",
+              "default": "all",
+              "options": [
+                {
+                  "name": "All",
+                  "value": "all",
+                  "description": "Also include all unchanged fields from the input"
+                },
+                {
+                  "name": "Selected",
+                  "value": "selected",
+                  "description": "Also include the fields listed in the parameter \"Fields To Include\""
+                },
+                {
+                  "name": "All Except",
+                  "value": "except",
+                  "description": "Exclude the fields listed in the parameter \"Fields to Exclude\""
+                }
+              ],
+              "required": false,
+              "displayName": "Input Fields to Include",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "other_fields": [
+                    true
+                  ]
+                }
+              },
+              "is_reset_disabled": false,
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "fields_to_include",
+              "type": "string",
+              "default": "",
+              "required": false,
+              "displayName": "Fields To Include",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "other_fields": [
+                    true
+                  ],
+                  "input_fields_to_include": [
+                    "selected"
+                  ]
+                }
+              },
+              "is_reset_disabled": false,
+              "enable_column_fetch_config": false
+            },
+            {
+              "name": "fields_to_exclude",
+              "type": "string",
+              "default": "",
+              "required": false,
+              "displayName": "Fields To Exclude",
+              "typeOptions": {},
+              "is_expression": true,
+              "displayOptions": {
+                "show": {
+                  "other_fields": [
+                    true
+                  ],
+                  "input_fields_to_include": [
+                    "except"
+                  ]
+                }
+              },
+              "is_reset_disabled": false,
+              "enable_column_fetch_config": false
+            }
+          ]
+        },
+        "type": "EDIT FIELDS (SET)",
+        "position": {
+          "x": 216,
+          "y": 0
+        },
+        "dimensions": {
+          "width": 317,
+          "height": 56
+        },
+        "parameters": {
+          "json": "{   \"my_field_1\": \"value\",   \"my_field_2\": 1 }",
+          "mode": "manual",
+          "json-mode": "expression",
+          "field_to_set": [
+            {
+              "key": "age",
+              "value": "28",
+              "keyMode": "fixed",
+              "valueMode": "fixed",
+              "valueType": "string"
+            }
+          ],
+          "other_fields": false,
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          },
+          "fields_to_exclude": "",
+          "fields_to_include": "",
+          "input_fields_to_include": "all"
+        },
+        "selectable": false,
+        "trigger_type": null,
+        "configuration": {
+          "outputSchema": {
+            "skeleton": [
+              {
+                "age": ""
+              }
+            ],
+            "capturedAt": "2026-09-09T05:14:04.134Z"
+          },
+          "execution_setting": {
+            "notes": "",
+            "on_error": "stop_workflow",
+            "max_retries": 2,
+            "execute_once": false,
+            "retry_on_fail": false,
+            "always_output_data": false,
+            "wait_between_tries": 1000,
+            "display_note_in_flow": false
+          }
+        },
+        "nodeTypeActions": "transformation"
+      }
+    ],
+    "notes": [
+      {
+        "id": "6e0deafb-8f70-49de-8c6a-4946ec1179f0",
+        "color": "var(--sticky-yellow-fill)",
+        "content": "",
+        "position": {
+          "x": 300,
+          "y": 200
+        },
+        "authorName": "Sumit1997",
+        "showAuthor": false,
+        "outlineColor": "var(--sticky-yellow-outline)"
+      },
+      {
+        "id": "0e0a58b5-cb67-4f45-a66d-1b06593afb5f",
+        "color": "var(--sticky-yellow-fill)",
+        "content": "",
+        "position": {
+          "x": 300,
+          "y": 200
+        },
+        "authorName": "Sumit1997",
+        "showAuthor": false,
+        "outlineColor": "var(--sticky-yellow-outline)"
+      },
+      {
+        "id": "b0bcc11c-11fb-4489-a71e-70190c8239c0",
+        "color": "var(--sticky-yellow-fill)",
+        "content": "",
+        "position": {
+          "x": 300,
+          "y": 200
+        },
+        "authorName": "Sumit1997",
+        "showAuthor": false,
+        "outlineColor": "var(--sticky-yellow-outline)"
+      },
+      {
+        "id": "7e0ca40a-28a6-45f8-bb51-9b81366e40de",
+        "color": "var(--sticky-yellow-fill)",
+        "content": "",
+        "position": {
+          "x": 300,
+          "y": 200
+        },
+        "authorName": "Sumit1997",
+        "showAuthor": false,
+        "outlineColor": "var(--sticky-yellow-outline)"
+      },
+      {
+        "id": "a31f4034-5560-43b6-9d29-51d4aff93d7a",
+        "color": "var(--sticky-yellow-fill)",
+        "content": "",
+        "position": {
+          "x": 300,
+          "y": 200
+        },
+        "authorName": "Sumit1997",
+        "showAuthor": false,
+        "outlineColor": "var(--sticky-yellow-outline)"
+      },
+      {
+        "id": "1252e980-3313-439d-9c90-0c23621b254b",
+        "color": "var(--sticky-yellow-fill)",
+        "content": "",
+        "position": {
+          "x": 300,
+          "y": 200
+        },
+        "authorName": "Sumit1997",
+        "showAuthor": false,
+        "outlineColor": "var(--sticky-yellow-outline)"
+      },
+      {
+        "id": "b5d28f55-b5ae-4375-8d5a-916b5fc00f6d",
+        "color": "var(--sticky-yellow-fill)",
+        "content": "",
+        "position": {
+          "x": 300,
+          "y": 200
+        },
+        "authorName": "Sumit1997",
+        "showAuthor": false,
+        "outlineColor": "var(--sticky-yellow-outline)"
+      },
+      {
+        "id": "4dee59c4-4014-4778-ab66-d89d3c54ded9",
+        "color": "var(--sticky-yellow-fill)",
+        "content": "",
+        "position": {
+          "x": 300,
+          "y": 200
+        },
+        "authorName": "Sumit1997",
+        "showAuthor": false,
+        "outlineColor": "var(--sticky-yellow-outline)"
+      },
+      {
+        "id": "e84e323f-3924-4908-8b24-1607f28811f0",
+        "color": "var(--sticky-yellow-fill)",
+        "content": "",
+        "position": {
+          "x": 300,
+          "y": 200
+        },
+        "authorName": "Sumit1997",
+        "showAuthor": false,
+        "outlineColor": "var(--sticky-yellow-outline)"
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 1
+    }
+  }
+}
